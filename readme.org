@@ -2,8 +2,8 @@
 
 Build a common T1-w and brain mask template from the [[https://sites.google.com/view/calgary-campinas-dataset/home][Calgary-Campinas-359]] dataset.
 
-[[template.gif
-]]
+[[template.gif]]
+
 ** Requisites:
 - [[https://github.com/ANTsX/ANTsPy][ANTS]]
 - Numpy
