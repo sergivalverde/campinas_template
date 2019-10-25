@@ -1,0 +1,31 @@
+* Calgary / Campinas template
+
+Build a common T1-w and brain mask template from the [[https://sites.google.com/view/calgary-campinas-dataset/home][Calgary-Campinas-359]] dataset.
+
+[[template.gif
+]]
+** Requisites:
+- [[https://github.com/ANTsX/ANTsPy][ANTS]]
+- Numpy
+
+** Method
+All images are registered to the first case =CC0001= using either =linear= or =deformable= registration.
+
+** How to generate new templates
+
+Just select the parameters from the beginning of the =build_template.py= file:
+
+#+begin_src python
+
+IMAGE_PATH = '/home/sergivalverde/DATA/campinas/all'
+T1_NAME = 'T1.nii.gz'  # T1 name, originally was CC...vendor...
+BRAINMASK_NAME = 'brainmask_ss.nii.gz'  # brainmask name
+
+# registration options
+REG_METHOD = 'Affine'  # choose 'Syn' for deformable, etc...
+INTERP = 'linear'   # hwo t
+
+# output names
+T1_OUT_TEMPLATE_PATH = 'CC351_lin_t1.nii.gz'
+BRAINMASK_OUT_TEMPLATE_PATH = 'CC351_lin_brainmask.nii.gz'
+#+end_src
